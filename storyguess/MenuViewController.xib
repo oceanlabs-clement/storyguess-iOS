@@ -1,22 +1,151 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="storyguess" customModuleProvider="target">
             <connections>
+                <outlet property="floatingBgView" destination="M7l-Xq-vOi" id="BIl-Re-hzz"/>
+                <outlet property="homeButton" destination="E1k-iF-Saw" id="dRv-IB-Gfo"/>
+                <outlet property="leftButton" destination="Whm-7x-sdq" id="maw-n4-Diy"/>
+                <outlet property="refreshButton" destination="wni-Eg-U19" id="JCx-pv-j4W"/>
+                <outlet property="rightButton" destination="txA-mK-yIu" id="aTD-ay-xUn"/>
+                <outlet property="stackView" destination="78f-Fk-IJW" id="U3a-UY-bRC"/>
+                <outlet property="tabBarBgView" destination="rhF-pv-IMN" id="bdv-U1-4zJ"/>
+                <outlet property="triggerTabBarButton" destination="QqV-lY-c1Q" id="iDu-RK-iJ2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="SHi-GU-Abv" id="J9e-22-OAI"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="78f-Fk-IJW">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHi-GU-Abv">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <wkWebViewConfiguration key="configuration">
+                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                <wkPreferences key="preferences"/>
+                            </wkWebViewConfiguration>
+                        </wkWebView>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhF-pv-IMN" userLabel="tabBarBgView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="o9N-tq-XXC">
+                                    <rect key="frame" x="8" y="0.0" width="359" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1k-iF-Saw">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="bZo-sK-awB"/>
+                                                <constraint firstAttribute="height" constant="50" id="gph-mE-Jhz"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="house.fill" catalog="system"/>
+                                            <connections>
+                                                <action selector="button2OnTapped:" destination="-1" eventType="touchUpInside" id="D3T-dQ-Xbo"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whm-7x-sdq">
+                                            <rect key="frame" x="103" y="0.0" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="AxC-F7-liq"/>
+                                                <constraint firstAttribute="width" constant="50" id="VyI-r0-OZp"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="arrow.left" catalog="system"/>
+                                            <connections>
+                                                <action selector="button2OnTapped:" destination="-1" eventType="touchUpInside" id="rGX-Im-rpP"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txA-mK-yIu">
+                                            <rect key="frame" x="206" y="0.0" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="Lbf-zO-NOI"/>
+                                                <constraint firstAttribute="height" constant="50" id="s5d-Wq-1aE"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="arrow.right" catalog="system"/>
+                                            <connections>
+                                                <action selector="button2OnTapped:" destination="-1" eventType="touchUpInside" id="ffc-oq-pEt"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wni-Eg-U19">
+                                            <rect key="frame" x="309" y="0.0" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="0y6-sw-dCw"/>
+                                                <constraint firstAttribute="width" constant="50" id="g5C-nS-njK"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="arrow.clockwise" catalog="system"/>
+                                            <connections>
+                                                <action selector="button2OnTapped:" destination="-1" eventType="touchUpInside" id="d7A-bw-lsl"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="o9N-tq-XXC" firstAttribute="leading" secondItem="rhF-pv-IMN" secondAttribute="leading" constant="8" id="PAd-Q7-NL3"/>
+                                <constraint firstAttribute="trailing" secondItem="o9N-tq-XXC" secondAttribute="trailing" constant="8" id="PRW-8A-Qws"/>
+                                <constraint firstItem="o9N-tq-XXC" firstAttribute="top" secondItem="rhF-pv-IMN" secondAttribute="top" id="U1t-my-cg8"/>
+                                <constraint firstAttribute="bottom" secondItem="o9N-tq-XXC" secondAttribute="bottom" id="zYF-Uh-ArN"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M7l-Xq-vOi" userLabel="floatingBgView">
+                    <rect key="frame" x="0.0" y="308" width="50" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqV-lY-c1Q" userLabel="triggerTabBarButton">
+                            <rect key="frame" x="6" y="6" width="38" height="38"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="icon_home"/>
+                            <connections>
+                                <action selector="button2OnTapped:" destination="-1" eventType="touchUpInside" id="2de-ag-aRf"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.10980392160000001" green="0.15686274510000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="78f-Fk-IJW" secondAttribute="trailing" id="9aM-2d-IpK"/>
+                <constraint firstItem="78f-Fk-IJW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="V71-uK-Nkb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="78f-Fk-IJW" secondAttribute="bottom" id="bxm-1G-Gwk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="78f-Fk-IJW" secondAttribute="top" id="iUS-Qe-pCD"/>
+            </constraints>
+            <point key="canvasLocation" x="131" y="-11"/>
         </view>
     </objects>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
+        <image name="arrow.right" catalog="system" width="128" height="95"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="icon_home" width="250" height="250"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
